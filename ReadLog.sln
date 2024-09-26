@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadLog", "ReadLog.csproj", "{2ADF81B9-BA71-4DD7-9BDA-DC7415B8B403}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ADF81B9-BA71-4DD7-9BDA-DC7415B8B403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ADF81B9-BA71-4DD7-9BDA-DC7415B8B403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ADF81B9-BA71-4DD7-9BDA-DC7415B8B403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ADF81B9-BA71-4DD7-9BDA-DC7415B8B403}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

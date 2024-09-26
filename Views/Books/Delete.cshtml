@@ -1,0 +1,23 @@
+﻿@model ReadLog.Models.Book
+
+@{
+    ViewData["Title"] = "Delete Book";
+}
+
+<div class="container mt-4" style="background-color: white; padding: 10px;">
+    <div class="alert alert-warning mt-6"> 
+        <h4>Are you sure you want to delete the following book?</h4>
+        <p><strong>Title:</strong> @Model.Title</p>
+        <p><strong>Author:</strong> @Model.Author</p>
+        <p><strong>Published Date:</strong> @Model.PublishedDate.ToShortDateString()</p>
+    </div>
+
+    <form asp-action="Delete" method="post">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="Id" />
+        <div class="form-group">
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>

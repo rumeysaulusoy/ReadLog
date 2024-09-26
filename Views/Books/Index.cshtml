@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ReadLog.Models.Book>
+
+@{
+ViewData["Title"] = "Your Books";
+}
+
+<h3>@ViewData["Title"]</h3>
+
+<a asp-action="Create" style="background-color: rosybrown; color: white;" class="btn mb-3">Add New Book</a> 
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Publish Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var book in Model)
+    {
+    <tr>
+        <td>@book.Title</td>
+        <td>@book.Author</td>
+        <td>@book.PublishedDate.ToShortDateString()</td>
+        <td>
+            <a asp-action="Edit" asp-route-id="@book.Id" class="btn" style="background-color: darkolivegreen; color: white;">Edit</a> 
+            <a asp-action="Details" asp-route-id="@book.Id" class="btn" style="background-color: lightgray; color: black;">Details</a> 
+            <a asp-action="Delete" asp-route-id="@book.Id" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>

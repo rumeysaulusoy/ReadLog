@@ -1,0 +1,37 @@
+﻿@{
+var book = ViewBag.Book as Book;
+var readingProgress = ViewBag.ReadingProgress as ReadingProgress;
+}
+
+<div class="container mt-4">
+    <div class="d-flex align-items-center">
+        <h1 style="font-size: 2em; color: black; margin: 0;">@book.Title</h1>
+        <h1 style="font-size: 2em; color: black; margin: 0;">&nbsp;Reading Progress</h1>
+    </div>
+
+    <div class="table-responsive mt-4">
+        <table class="table table-striped">
+            <thead class="thead-light">
+            <tr>
+                <th>Pages Read</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>@readingProgress.PagesRead</td>
+                <td>@readingProgress.StartDate.ToShortDateString()</td>
+                <td>@(readingProgress.EndDate.HasValue ? readingProgress.EndDate.Value.ToShortDateString() : "Ongoing")</td>
+                <td>
+                    <a asp-action="Edit" asp-controller="ReadingProgress" asp-route-id="@readingProgress.Id"
+                       class="btn" style="background-color: rosybrown; color: white;">Edit</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-action="Index" asp-controller="Books" class="btn btn-secondary mt-4">Back to Books</a>
+</div>
