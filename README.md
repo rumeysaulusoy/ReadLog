@@ -41,7 +41,7 @@ This is a simple web application designed for tracking reading progress of books
 
 - **Reading Progress**
   
-![Reading Progress]([https://github.com/rumeysaulusoy/ReadLog/blob/main/Screenshots/screenshot_5.jpg))
+![Reading Progress](https://github.com/rumeysaulusoy/ReadLog/blob/main/Screenshots/screenshot_5.jpg)
 
 - **Edit Book**
   
